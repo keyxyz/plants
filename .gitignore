@@ -226,3 +226,6 @@ dataset
 *.aux
 *.fls
 *.zip
+*.snm
+*.toc
+*.nav

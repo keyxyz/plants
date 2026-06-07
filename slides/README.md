@@ -1,8 +1,8 @@
-# CVPR/ICCV/3DV Official LaTeX template 
+# Slides using [Beamer](https://www.overleaf.com/learn/latex/Beamer)  
 
-> template obtained from [https://github.com/cvpr-org/author-kit](https://github.com/cvpr-org/author-kit) 
+> template obtained from Overleaf - [https://www.overleaf.com/learn/latex/Beamer](https://www.overleaf.com/learn/latex/Beamer) 
 
-## PDF generation steps
+## Slides generation steps
 
 > Only on Linux/Mac/Unix systems
 
