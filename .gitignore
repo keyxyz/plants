@@ -218,3 +218,11 @@ __marimo__/
 .streamlit/secrets.toml
 
 dataset
+*.brf
+*.blg
+*.fdb_latexmk
+*.bbl
+*.out
+*.aux
+*.fls
+*.zip
