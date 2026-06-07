@@ -1,0 +1,21 @@
+\section{Related Work}
+
+\subsection{Plant Species Classification}
+
+Automated plant species identification has become an important application of computer vision due to its relevance in agriculture, biodiversity conservation, and traditional medicine. Image-based plant recognition systems aim to distinguish plant species using visual characteristics captured from digital images. However, variations in lighting conditions, viewing angles, and background complexity make this task challenging, particularly when images are collected in natural environments.
+
+\subsection{Feature-Based Image Classification}
+
+Traditional image classification methods rely on handcrafted feature descriptors to represent visual information. In this work, Oriented FAST and Rotated BRIEF (ORB) features were used to detect keypoints and generate descriptors that are robust to rotation and scale variations \cite{orb}. ORB provides an efficient alternative for extracting local image features and has been widely applied in computer vision tasks.
+
+To obtain a fixed-length image representation, the extracted ORB descriptors were converted into a Bag-of-Visual-Words (BoVW) representation using K-Means clustering \cite{bovw}. The resulting visual word histograms were then classified using machine learning algorithms including Support Vector Machines (SVMs), Random Forests, Logistic Regression, and Gradient Boosting. Although BoVW-based approaches can effectively summarize local image features, they do not preserve the spatial relationships between keypoints within an image.
+
+\subsection{Convolutional Neural Networks for Image Recognition}
+
+Convolutional Neural Networks (CNNs) automatically learn hierarchical feature representations directly from image pixels, eliminating the need for handcrafted descriptors. By learning both low-level and high-level visual patterns, CNNs have become a widely used approach for image classification tasks. In this work, a custom CNN architecture was trained from scratch to classify herbal plant images and to evaluate the effectiveness of learned features compared with traditional feature-based methods.
+
+\subsection{Transfer Learning for Small Datasets}
+
+Transfer learning is commonly used when the available training data are limited. Instead of training a deep network from scratch, a model pre-trained on a large dataset can be adapted to a new classification task. In this study, MobileNetV2 \cite{mobilenetv2} pre-trained on ImageNet was used as the backbone network. MobileNetV2 employs depthwise separable convolutions, making it computationally efficient while maintaining strong classification performance.
+
+In this work, we compare three approaches for herbal plant classification: a traditional ORB-BoVW machine learning pipeline, a custom CNN trained from scratch, and a MobileNetV2 transfer learning model. This comparison provides insights into the effectiveness of handcrafted features and deep learning methods for plant recognition under real-world environmental conditions.

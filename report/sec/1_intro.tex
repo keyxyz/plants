@@ -1,0 +1,27 @@
+\section{Introduction}
+
+The automatic identification of plant species has become an important research area in computer vision due to its applications in agriculture, biodiversity conservation, environmental monitoring, and traditional medicine. Accurate plant recognition systems can assist researchers, farmers, and healthcare practitioners in identifying species efficiently without requiring extensive botanical expertise. With the increasing availability of digital imaging devices and machine learning techniques, image-based plant classification has emerged as a practical alternative to manual identification.
+
+Despite recent advances, plant classification remains a challenging task. Images of plants often exhibit substantial variations in illumination, viewing angles, scale, background clutter, and image quality. These challenges are further amplified when data are collected in uncontrolled outdoor environments. Traditional computer vision approaches rely on handcrafted features designed to capture local image characteristics, but such methods frequently struggle to represent complex visual patterns and semantic information. In contrast, deep learning approaches have demonstrated remarkable success in learning hierarchical feature representations directly from image data, often achieving superior performance across a wide range of visual recognition tasks.
+
+This project investigates the problem of herbal plant classification using a dataset constructed from 21 video recordings captured under diverse environmental and lighting conditions. Frames extracted from the videos were processed through a preprocessing pipeline consisting of vegetation filtering, blur detection, image normalization, and data augmentation. The resulting dataset contains 425 images distributed across 14 herbal plant classes.
+
+To evaluate the effectiveness of different recognition strategies, three approaches were studied. First, a traditional machine learning pipeline was implemented using ORB feature extraction and a Bag-of-Visual-Words (BoVW) representation, followed by classification using Support Vector Machines (SVM), Random Forests, Logistic Regression, and Gradient Boosting. Second, a custom Convolutional Neural Network (CNN) was trained directly on the image data. Finally, transfer learning was employed using a MobileNetV2 model pre-trained on ImageNet to leverage rich feature representations learned from large-scale image datasets.
+
+Experimental results reveal substantial differences among the evaluated methods. While the best traditional approach achieved moderate classification performance, the custom CNN struggled to generalize effectively on the relatively small dataset. The transfer learning model achieved the highest accuracy, demonstrating the effectiveness of pre-trained deep neural networks for herbal plant recognition under real-world conditions.
+
+The main contributions of this work are summarized as follows:
+
+\begin{itemize}
+\item Construction of a herbal plant image dataset from video sequences collected under diverse environmental conditions.
+
+\item Development of a preprocessing pipeline incorporating vegetation filtering, blur detection, image normalization, and data augmentation.
+
+\item Comparative evaluation of traditional feature-based methods, a custom CNN, and transfer learning for herbal plant classification.
+
+\item Demonstration that transfer learning with MobileNetV2 substantially outperforms handcrafted feature-based approaches and CNN training from scratch on a limited dataset.
+
+\end{itemize}
+
+The remainder of this paper is organized as follows. Section 2 reviews related work on plant classification and image recognition techniques. Section 3 describes the proposed methodology, including dataset preparation, feature extraction, and model development. Section 4 presents the experimental setup and results. Finally, Section 5 concludes the paper and discusses future research directions.
+
