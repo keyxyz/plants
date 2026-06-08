@@ -8,3 +8,20 @@
 ![](./report/media/samples.png)
 
 </div>
+
+### Project setup
+
+> only for linux/mac
+
+1. Install python 3
+2. create virtual environment
+3. install dependencies
+4. run training notebook
+
+### Slides
+
+> See [slides/README.md](./slides/README.md)
+
+### Report
+
+> See [report/README.md](./report/README.md)
