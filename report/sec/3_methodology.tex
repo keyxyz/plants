@@ -4,7 +4,7 @@ This section describes the dataset construction process, image preprocessing pip
 
 \subsection{Dataset Construction}
 
-The dataset used in this study was constructed from 21 video clips containing different herbal plant species captured under diverse environmental and lighting conditions. The videos were processed frame-by-frame to extract representative images for classification. Since consecutive video frames often contain redundant information, only frames satisfying predefined quality criteria were retained.
+The dataset \cite{henrysml_herbal_plants} used in this study was constructed from 21 video clips containing different herbal plant species captured under diverse environmental and lighting conditions. The videos were processed frame-by-frame to extract representative images for classification. Since consecutive video frames often contain redundant information, only frames satisfying predefined quality criteria were retained.
 
 After preprocessing and filtering, a total of 425 images were obtained and organized into 14 plant classes labeled from A to N. To ensure reproducibility and unbiased evaluation, the dataset was divided into training, validation, and testing subsets using stratified sampling.
 
@@ -54,7 +54,7 @@ The raw video frames exhibited considerable variability in image quality, vegeta
 
 Since the objective was to classify herbal plants, images containing insufficient vegetation were removed. Vegetation regions were identified using color thresholding in the HSV color space. Green pixels corresponding to plant regions were detected and their proportion within the image was computed.
 
-Images containing less than a predefined vegetation coverage threshold were discarded. This step reduced the inclusion of frames dominated by background objects and improved the relevance of the training data.
+Images containing less than a 50\% vegetation coverage threshold were discarded. This step reduced the inclusion of frames dominated by background objects and improved the relevance of the training data.
 
 % Figure 2: Vegetation filtering process showing original image, mask, and filtered output
 
@@ -93,7 +93,7 @@ The traditional machine learning pipeline employed Oriented FAST and Rotated BRI
 
 For each image, up to 1000 ORB keypoints were detected and corresponding descriptors were extracted. The descriptors collected from all training images were combined to form a feature pool containing 232,788 local descriptors.
 
-To convert variable-length descriptor sets into fixed-length feature vectors, a Bag-of-Visual-Words (BoVW) representation was adopted. MiniBatch K-Means clustering was applied to the descriptor pool to construct a visual vocabulary consisting of 500 visual words.
+To convert variable-length descriptor sets into fixed-length feature vectors, a Bag-of-Visual-Words (BoVW) representation was adopted. MiniBatch K-Means clustering \cite{minibatchkmeans} was applied to the descriptor pool to construct a visual vocabulary consisting of 500 visual words.
 
 Each image was then represented as a normalized histogram describing the frequency of occurrence of each visual word.
 
